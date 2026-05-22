@@ -20,8 +20,31 @@ export const load: PageLoad = async ({ params }) => {
         error(response.status, response.statusText);
     }
 
+    let content: string;
+
     try {
-        const content = await response.text();
+        content = await response.text();
+
+        response = await fetch(`https://${params.author}.github.io/myplaintxtblog/name`);
+    } catch (e) {
+        const err = e as Error;
+
+        error(500,
+            `${err.message}
+            ${err.cause}`
+        );
+    }
+
+    if (!response.ok) {
+        console.log(response.status);
+        error(response.status, response.statusText);
+    }
+
+    let author: string;
+
+    try {
+        author = await response.text();
+
         const lines = content.split('\n');
 
         const date = new Intl.DateTimeFormat(undefined, {
@@ -33,7 +56,8 @@ export const load: PageLoad = async ({ params }) => {
         }).format(new Date(`${lines[2]}T00:00:00Z`));
 
         return {
-            author: params.author,
+            username: params.author,
+            author: author,
             title: lines[0],
             subtitle: lines[1],
             date: date,

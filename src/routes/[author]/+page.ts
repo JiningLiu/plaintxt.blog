@@ -25,7 +25,7 @@ export const load: PageLoad = async ({ params }) => {
         const content = await response.json();
 
         return {
-            author: params.author,
+            username: params.author,
             manifest: content as Manifest
         };
     } catch (e) {
