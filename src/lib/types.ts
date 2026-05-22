@@ -1,5 +1,6 @@
 export interface Manifest {
   version: number;
+  author: string;
   directories: Directory[];
 }
 

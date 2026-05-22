@@ -6,7 +6,11 @@
 </script>
 
 <div id="container">
-	<h1>{data.author}</h1>
+	<div id="header">
+		<h1>{data.manifest.author}</h1>
+		<h4>({data.author})</h4>
+	</div>
+
 	{#each data.manifest.directories as dir (dir.path)}
 		{#each dir.articles as article (article.path)}
 			<h3>
@@ -18,3 +22,11 @@
 		{/each}
 	{/each}
 </div>
+
+<style>
+	#header {
+		display: flex;
+		align-items: baseline;
+		gap: 1rem;
+	}
+</style>
