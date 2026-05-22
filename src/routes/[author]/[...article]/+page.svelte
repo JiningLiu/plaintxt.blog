@@ -6,19 +6,19 @@
 </script>
 
 <svelte:head>
-	<title>{data.title} by {data.author} ({data.username})</title>
+	<title>{data.title} by {data.author}</title>
 	<meta name="description" content={data.subtitle} />
 
 	<meta property="og:url" content="https://plaintxt.blog/{data.username}" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="{data.title} by {data.author} ({data.username})" />
+	<meta property="og:title" content="{data.title} by {data.author}" />
 	<meta property="og:description" content={data.subtitle} />
 	<meta property="og:image" content="https://github.com/{data.username}.png" />
 
 	<meta name="twitter:card" content="summary" />
 	<meta property="twitter:domain" content="plaintxt.blog" />
 	<meta property="twitter:url" content="https://plaintxt.blog/{data.username}" />
-	<meta name="twitter:title" content="{data.title} by {data.author} ({data.username})" />
+	<meta name="twitter:title" content="{data.title} by {data.author}" />
 	<meta name="twitter:description" content={data.subtitle} />
 	<meta name="twitter:image" content="https://github.com/{data.username}.png" />
 </svelte:head>
