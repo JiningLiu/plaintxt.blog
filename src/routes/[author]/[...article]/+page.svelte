@@ -32,7 +32,7 @@
 	<h2>{data.subtitle}</h2>
 	<h4>{data.author} | {data.date}</h4>
 
-	{#each data.content.split('\n\n') as paragraph (paragraph)}
+	{#each data.content.split('\n\n') as paragraph, i (i)}
 		<p>
 			{#each paragraph.split('\n') as line, i (i)}
 				{line}

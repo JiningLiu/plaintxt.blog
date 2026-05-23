@@ -1,5 +1,6 @@
 :root {
 	font-family: monospace;
+	overflow-wrap: break-word;
 	color: #000;
 	background-color: #f9f4ed;
 
@@ -21,8 +22,8 @@ body {
 
 #container {
 	margin: 0 auto;
-	padding: 4vw 2rem;
-	max-width: 64rem;
+	padding: 2rem;
+	max-width: min(calc(100vw - 4rem), 64rem);
 }
 
 h1 {

@@ -17,7 +17,6 @@ export const load: PageLoad = async ({ params }) => {
     }
 
     if (!response.ok) {
-        console.log(response.status);
         error(response.status, response.statusText);
     }
 
