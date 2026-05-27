@@ -22,7 +22,7 @@ body {
 
 #container {
 	margin: 0 auto;
-	padding: 2rem;
+	padding: 4rem 2rem;
 	max-width: min(calc(100vw - 4rem), 64rem);
 }
 
@@ -112,4 +112,8 @@ a {
 			opacity: 1;
 		}
 	}
+}
+
+#footer {
+	max-width: min(calc(100vw - 4rem), 32rem);
 }

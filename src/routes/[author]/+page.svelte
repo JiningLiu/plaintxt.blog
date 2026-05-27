@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { PageProps } from './$types';
 	import { resolve } from '$app/paths';
+	import Footer from '$lib/Footer.svelte';
 
 	let { data }: PageProps = $props();
 </script>
@@ -45,6 +46,8 @@
 			<h4>{article.subtitle}</h4>
 		{/each}
 	{/each}
+
+	<Footer username={data.username} isArticle={false} />
 </div>
 
 <style>
@@ -52,5 +55,6 @@
 		display: flex;
 		align-items: baseline;
 		gap: 1rem;
+		margin-top: 4rem;
 	}
 </style>

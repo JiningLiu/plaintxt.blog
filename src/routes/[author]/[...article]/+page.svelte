@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { PageProps } from './$types';
 	import { resolve } from '$app/paths';
+	import Footer from '$lib/Footer.svelte';
 
 	let { data }: PageProps = $props();
 </script>
@@ -43,4 +44,6 @@
 			{/each}
 		</p>
 	{/each}
+
+	<Footer username={data.username} isArticle={true} />
 </div>
